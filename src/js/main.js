@@ -1,0 +1,5 @@
+$(function(){
+	
+	//= components/burger.js
+
+});
