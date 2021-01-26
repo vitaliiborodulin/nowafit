@@ -1,0 +1,1 @@
+$((function(){const e=$(".header__burger"),n=$(".header__menu");e.on("click",(function(r){r.preventDefault(),e.toggleClass("header__burger--close"),n.toggleClass("header__menu--open"),$(document).keyup((function(n){"Escape"!==n.key&&27!==n.keyCode||($(".header__menu").removeClass("header__menu--open"),e.removeClass("header__burger--close"))}))}))}));
