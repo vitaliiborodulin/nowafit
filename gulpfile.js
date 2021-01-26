@@ -52,11 +52,12 @@ exports.cssDev = cssDev;
 
 const cssProd = () => {
 	return gulp.src("./src/less/styles.less")
-		// .pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(gcmq())
 		.pipe(autoprefixer())
-		// .pipe(sourcemaps.write())
+		.pipe(cleanCss({
+			level: 2
+		}))
 		.pipe(gulp.dest(dist + "/css"))
 		.pipe(sync.stream());
 }
