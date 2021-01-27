@@ -1,0 +1,60 @@
+.download {
+	overflow-x: hidden;
+	background: url(../img/dl-bg.svg) no-repeat center center;
+	padding: 80px 0;
+	.md-block({
+		padding: 60px 0;
+		background: @white;
+	});
+	
+	&__title {
+		margin-bottom: 74px;
+		text-align: center;
+		.md-block({
+			margin-bottom: 40px;
+		});
+	}
+
+	&__content {
+		display: flex;
+		margin-bottom: 44px;
+	}
+
+	&__item {
+
+		&:first-child {
+			.md(margin-left, -150px);
+		}
+
+		&:nth-child(2) {
+			.md-block({
+				margin-left: auto;
+				margin-right: auto;
+			});
+			img{
+				transform: scale(1.1);
+			}
+		}
+
+		&:last-child {
+			.md(margin-right, -150px);
+		}
+	}
+
+	&__btns {
+		margin: 0 auto;
+		max-width: 520px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.sm-block({
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+		});
+		a:first-child {
+			// display: block;
+			margin-bottom: 32px;
+		}
+	}
+}
