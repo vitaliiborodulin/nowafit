@@ -1,0 +1,87 @@
+.freeweb {
+	// position: relative;
+	// z-index: 1;
+
+	&__content {
+		.row-flex();
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		.sm(margin-bottom, 24px);
+	}
+
+	&__text {
+		.col();
+		.size(6);
+		.size-md(12);
+		padding: 80px 0;
+		.md-block({
+			padding-top: 60px;
+			padding-bottom: 40px;
+		});
+	}
+
+	&__par {
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		.md(margin-bottom, 12px);
+
+		&:last-of-type {
+			margin-bottom: 40px;
+			.md(margin-bottom, 32px);
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		margin-right: 30px;
+	}
+
+	&__price {
+		position: relative;
+		z-index: 3;
+		font-size: 48px;
+		font-weight: 400;
+		&::after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 97px;
+			height: 25px;
+			background-color: @white;
+			opacity: 0.4;
+			z-index: -1;
+		}
+	}
+
+	&__pic {
+		.col();
+		.size(6);
+		.size-md(12);
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		img {
+			filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+			.sm-block({
+				max-width: 209px;
+			});
+		}
+	}
+
+}
+
+.page-psyhology {
+	.freeweb {
+		background-color: @accent;
+	}
+}

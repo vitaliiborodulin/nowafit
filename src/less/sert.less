@@ -1,0 +1,41 @@
+.sert {
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	.sm-block({
+		padding-top: 60px;
+		padding-bottom: 60px;
+	});
+
+	&__title {
+		margin-bottom: 80px;
+		text-align: center;
+		.sm-block({
+			margin-bottom: 40px;
+		});
+	}
+		
+	&__item {
+		transition: all 0.5s;
+		cursor: pointer;
+		&:hover {
+				transform: scale(1.05);
+		}
+
+		img {
+			display: block;
+			width: 300px!important;
+			height: 484px;
+			margin: 0 auto;
+			padding: 10px;
+			border: 1.5px solid @accent;
+			.sm-block({
+				padding: 5px;
+					width: 240px!important;
+					height: 323px;
+			});
+		}
+	}
+	
+	
+}

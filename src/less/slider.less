@@ -1,0 +1,61 @@
+.owl-carousel {
+	position: relative;
+	
+	.owl-stage-outer {
+		padding: 12px;
+		.sm(padding, 0);
+	}
+}
+
+.owl-theme {
+	.owl-nav {
+		position: absolute;
+		top: 28%;
+		// transform: translateY(-50%);
+		width: 100%;
+		font-size: 0!important;
+
+		.owl-prev, .owl-next {
+			position: absolute;
+			width: 35px;
+			height: 34px;
+			background: url('../img/slider-arrow-right.svg') no-repeat!important;
+			outline: none;
+		}
+
+		.owl-prev {
+			left: -25px;
+			transform: rotate(180deg);
+		}
+
+		.owl-next {
+			right: -25px;
+		}
+	}
+
+	.owl-dots {
+		margin-top: 60px;
+		.sm(margin-top, 44px);
+
+		.owl-dot {
+			span {
+				width: 60px;
+				height: 3px;
+				background: @textcolor;
+				opacity: 0.2;
+				.sm-block({
+					width: 32px;
+					height: 2px;
+				})
+			}
+		}
+
+		.owl-dot.active {
+			span {
+				background: @textcolor;
+				opacity: 1;
+			}
+		}
+	}
+
+}

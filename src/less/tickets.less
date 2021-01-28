@@ -1,0 +1,151 @@
+.tickets {
+	background: url(../img/tickets-bg-1.svg) center no-repeat,
+	url(../img/tickets-bg-2.svg) center no-repeat;
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	.md-block({
+		padding-top: 60px;
+		padding-bottom: 60px;
+	});
+
+	&__title {
+		position: relative;
+		margin-bottom: 60px;
+		text-align: center;
+		&::before {
+			position: absolute;
+			content: '';
+			width: 60px;
+			height: 2px;
+			top: 50%;
+			width: 40px;
+			right: -50px;
+			background-color: @accent;
+			display: none;
+			.sm(display, block);
+		}
+		.sm-block({
+			display: inline-block;
+			margin-bottom: 40px;
+			text-align: left;
+		});
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		max-width: 570px;
+		padding: 60px;
+		text-align: center;
+		background: @white;
+		box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;
+		.sm-block({
+			max-width: 100%;
+			padding: 40px;
+		});
+	}
+
+	&__header {
+		font-size: 42px;
+		line-height: 100%;
+		margin-bottom: 20px;
+		.sm-block({
+			font-size: 24px;
+			letter-spacing: 0.02em;
+			margin-bottom: 16px;
+		});
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		.sm-block({
+			font-size: 14px;
+			line-height: 160%;
+			letter-spacing: 0.04em;
+		})
+	}
+
+	&__date-title {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: 0.03em;
+		opacity: 0.5;
+		.sm-block({
+			font-size: 14px;
+			margin-bottom: 8px;
+		});
+	}
+
+	&__date {
+		margin-bottom: 30px;
+		font-size: 36px;
+		line-height: 100%;
+		letter-spacing: 0.02em;
+		color: @red;
+		.sm-block({
+			font-size: 24px;
+			margin-bottom: 24px;
+		});
+	}
+
+	&__price {
+		margin-bottom: 35px;
+		.sm(margin-bottom, 30px);
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		font-size: 48px;
+		line-height: 100%;
+		font-weight: 400;
+		&::after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 153px;
+			height: 25px;
+			background-color: @accent;
+			opacity: 0.4;
+			z-index: -1;
+		}
+	}
+
+	&__list {
+		li {
+			margin-bottom: 20px;
+			padding-left: 15px;
+			line-height: 160%;
+			letter-spacing: 0.04em;
+			&::before {
+				content: '\25A0';
+				margin-right: 15px;
+				color: @accent;
+			}
+			&:last-of-type {
+				margin-bottom: 40px;
+				.sm(margin-bottom, 32px);
+			}
+			.sm-block({
+				font-size: 16px;
+				margin-bottom: 16px;
+			});
+		}
+	}
+
+}
+
+@media (max-width: 1570px) {
+	.tickets {
+		background: none!important;
+	}
+}

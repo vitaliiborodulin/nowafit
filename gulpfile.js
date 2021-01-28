@@ -3,6 +3,7 @@ const sync = require('browser-sync');
 
 const uglify = require('gulp-uglify-es').default;
 const rigger = require('gulp-rigger');
+const imagemin = require('gulp-imagemin');
 const ghPages = require('gh-pages');
 const pathDeploy = require('path');
 const del = require('del');
@@ -105,12 +106,37 @@ const jsProd = () => {
 
 exports.jsProd = jsProd;
 
+const imagesDev = () => {
+	return gulp.src("./src/img/**/*.*")
+		.pipe(gulp.dest(dist + "img"))
+}
+
+exports.imagesDev = imagesDev;
+
+const imagesProd = () => {
+	return gulp.src("./src/img/**/*.*")
+	.pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+			plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+			]
+    })
+	]))
+	.pipe(gulp.dest(dist + "img"))
+}
+
+exports.imagesProd = imagesProd;
+
 // Copy
 const copy = () => {
 	return gulp.src([
 		"src/fonts/**/*",
-		"src/img/**/*",
 		"src/files/**/*",
+		// "src/favicon.ico",
 		"src/*.php",
 	], {
 		base: 'src'
@@ -152,14 +178,15 @@ exports.server = server;
 //Watch
 const watch = () => {
 	gulp.watch("./src/*.html", gulp.series(htmlDev));
-	gulp.watch("./src/html/*.html", gulp.series(htmlDev));
+	gulp.watch("./src/html/**/*.html", gulp.series(htmlDev));
 	gulp.watch("./src/less/**/*.less", gulp.series(cssDev));
 	gulp.watch("./src/js/**/*.js", gulp.series(jsDev));
+	gulp.watch("./src/img/**/*", gulp.series(imagesDev));
 	gulp.watch("./src/files/*.*", gulp.series(copy));
 	gulp.watch('./smartgrid.js', grid);
 	gulp.watch([
 		"src/fonts/**/*",
-		"src/img/**/*",
+		// "src/img/**/*",
 	], gulp.series("copy"));
 }
 
@@ -172,6 +199,7 @@ exports.dev = gulp.series(
 		htmlDev,
 		cssDev,
 		jsDev,
+		imagesDev,
 		copy
 	),
 	gulp.parallel(
@@ -187,6 +215,7 @@ exports.build = gulp.series(
 		htmlProd,
 		cssProd,
 		jsProd,
+		imagesProd,
 		copy
 	)
 );
