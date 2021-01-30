@@ -1,0 +1,49 @@
+.page-diet {
+	.cource {
+		&__program {
+			border-top: 1px solid @green;
+			border-bottom: 1px solid @green;
+		}
+
+		&__item {
+			border: 1px solid @green;
+		}
+
+		&__question {
+			&::after {
+				background-color: @green;
+			}
+		}
+
+		&__answer {
+			border-top: 1px solid @green;
+			li {
+				&::before {
+					color: @green;
+				}
+			}
+		}
+
+		&__more {
+			&-item {
+				border-bottom: 1px solid @green;
+			}
+		
+
+			&-title {
+				&::before {
+					background-color: @green;
+				}
+			}
+
+			&-list {
+				li {
+					&::before {
+						color: @green;
+					}
+				}
+			}
+		}
+
+	}
+}

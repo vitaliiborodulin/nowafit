@@ -86,106 +86,11 @@
 }
 
 // psyhology page hero section
+@import "page-psyhology/psyhology-hero";
 
-.page-psyhology {
-	.page-hero {
-		background: url(../img/psyh-hero-bg.svg) no-repeat center right;
-
-		&__title {
-			margin-bottom: 30px;
-			.sm(margin-bottom, 24px);
-		}
-
-		&__subtitle {
-			margin-bottom: 30px;
-			font-size: 20px;
-			line-height: 160%;
-
-			.sm-block({
-				margin-bottom: 24px;
-				font-size: 16px;
-				line-height: 160%;
-			});
-		}
-
-		&__date-title {
-			margin-bottom: 15px;
-			font-size: 16px;
-			line-height: 100%;
-			letter-spacing: 0.03em;
-			opacity: 0.5;
-			.sm-block({
-				margin-bottom: 8px;
-				font-size: 14px;
-				line-height: 100%;
-			});
-		}
-
-		&__date {
-			display: inline-block;
-			position: relative;
-			z-index: 1;
-			margin-bottom: 40px;
-			font-size: 36px;
-			line-height: 100%;
-			letter-spacing: 0.02em;
-			&::after {
-				position: absolute;
-				content: '';
-				left: 0;
-				bottom: -10px;
-				width: 257px;
-				height: 25px;
-				background-color: @accent;
-				z-index: -1;
-			}
-		}
-
-		&__btns {
-			.btn {
-				display: none;
-				width: 236px;
-				max-width: 236px;
-				margin: 0 auto;
-				margin-bottom: 32px;
-				.sm(display, block);
-			}
-		}
-
-		&__pic {
-			text-align: center;
-			// padding-bottom: 200px;
-			img {
-				width: 400px;
-				height: auto;
-				border-bottom: 2px solid @accent;
-				.md-block({
-					width: 300px;
-					// margin-bottom: 32px;
-				});
-			}
-
-		}
-
-	}
-}
-
+// diet page hero section
+@import "page-diet/diet-hero";
 
 // fitness page hero section
+@import "page-fitnes/fitnes-hero";
 
-.page-fitnes {
-	.page-hero {
-		background: url(../img/fit-hero-bg.svg) no-repeat 60% 20%;
-
-		&__pic {
-			img {
-				max-width: 130%;
-	
-				.lg-block({
-					max-width: 100%;
-				});
-			}
-		}
-
-	}
-}

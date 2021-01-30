@@ -1,0 +1,30 @@
+.page-diet {
+	.tickets {
+		background: url(../img/fit-tickets-bg-1.svg) 10% center no-repeat, url(../img/fit-tickets-bg-2.svg) 90% center no-repeat;
+
+		&__title {
+			&::before {
+				background-color: @green;
+			}
+		}
+
+		&__item {
+			.md(margin-bottom, 32px);
+		}
+
+		&__price {
+			&::after {
+				background-color: @green;
+			}
+		}
+
+		&__list {
+			li {
+				&::before {
+					color: @green;
+				}
+			}
+		}
+		
+	}
+}

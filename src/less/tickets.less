@@ -1,11 +1,9 @@
 .tickets {
-	background: url(../img/tickets-bg-1.svg) center no-repeat,
-	url(../img/tickets-bg-2.svg) center no-repeat;
 	padding-top: 140px;
 	padding-bottom: 140px;
 
 	.md-block({
-		padding-top: 60px;
+		padding-top: 50px;
 		padding-bottom: 60px;
 	});
 
@@ -33,11 +31,14 @@
 	}
 
 	&__box {
-		display: flex;
+		.row-flex();
 		justify-content: center;
 	}
 
 	&__item {
+		.col();
+		.size(6);
+		.size-md(12);
 		max-width: 570px;
 		padding: 60px;
 		text-align: center;
@@ -45,8 +46,8 @@
 		box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08);
 		border-radius: 8px;
 		.sm-block({
-			max-width: 100%;
-			padding: 40px;
+			// max-width: 100%;
+			padding: 30px 10px;
 		});
 	}
 
@@ -149,3 +150,9 @@
 		background: none!important;
 	}
 }
+
+// psyhology page tickets section
+@import "page-psyhology/psyhology-tickets";
+
+// diet page tickets section
+@import "page-diet/diet-tickets";

@@ -1,5 +1,5 @@
-// $('.faq__answer:first').show()
-// $('.faq__question:first').addClass('faq__question--open');
+$('.cource__answer:first').show();
+$('.cource__question:first').addClass('cource__question--open');
 
 $('.cource__question').on('click', function(){
 	let question = $(this);

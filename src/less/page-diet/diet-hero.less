@@ -1,0 +1,49 @@
+.page-diet {
+	.page-hero {
+		background: url(../img/diet-hero-bg.svg) no-repeat 65% center;
+
+		&__title {
+			margin-bottom: 30px;
+			.sm(margin-bottom, 24px);
+		}
+
+		&__subtitle {
+			margin-bottom: 30px;
+			font-size: 20px;
+			line-height: 160%;
+
+			.sm-block({
+				margin-bottom: 24px;
+				font-size: 16px;
+				line-height: 160%;
+			});
+		}
+
+		&__btns {
+			.btn {
+				display: none;
+				width: 236px;
+				max-width: 236px;
+				margin: 0 auto;
+				margin-bottom: 32px;
+				.sm(display, block);
+			}
+		}
+
+		&__pic {
+			text-align: center;
+			// padding-bottom: 200px;
+			img {
+				width: 400px;
+				height: auto;
+				border-bottom: 2px solid @green;
+				.md-block({
+					width: 300px;
+					// margin-bottom: 32px;
+				});
+			}
+
+		}
+
+	}
+}

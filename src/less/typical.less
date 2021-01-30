@@ -132,8 +132,8 @@
 	}
 }
 
-// common psyhology page styles
-.page-psyhology {
+// common psyhology and diet page styles
+.page-psyhology, .page-diet {
 	.typical {
 		&__title {
 			position: relative;
@@ -156,55 +156,25 @@
 	}
 }
 
+.page-diet {
+	.typical {
+		&__title {
+			&::before {
+				background-color: @green;
+			}
+		}
+	}
+}
 
 // psyhology page whom section
-
-.page-psyhology {
-	.typical--whom {
-
-		.typical__content {
-			align-items: flex-start;
-		}
-
-		.typical__title {
-			margin-bottom: 82px;
-			.sm-block({
-				margin-bottom: 24px;
-			});
-			
-		}
-
-		.typical__pic {
-			.md(order, -1);
-			img {
-				.md(display, none);
-			}
-		}
-	}
-}
+@import "page-psyhology/psyhology-whom";
 
 // psyhology page solution section
-.page-psyhology {
-	.typical--solution {
-		padding-top: 80px;
-		padding-bottom: 87px;
-		.sm-block({
-			padding-top: 60px;
-			padding-bottom: 65px;
-		});
+@import "page-psyhology/psyhology-solution";
 
-		.typical__par {
-			.sm(margin-bottom, 12px);
-			&:last-of-type {
-				margin-bottom: 40px;
-				.sm(margin-bottom, 32px);
-			}
-		}
+// diet page whom section
+@import "page-diet/diet-whom";
 
-		.typical__pic {
-			img {
-				transform: scale(-1, 1);
-			}
-		}
-	}
-}
+// diet page solution section
+@import "page-diet/diet-solution";
+
