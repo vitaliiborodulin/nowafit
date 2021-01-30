@@ -36,6 +36,19 @@
 		padding-right: 90px;
 		margin-bottom: 24px;
 		.md(padding, 0px);
+
+		li {
+			margin-bottom: 20px;
+			&::before {
+				content: '\25A0';
+				margin-right: 15px;
+				color: @accent;
+			}
+		}
+
+		mark {
+			background-color: @accent;
+		}
 	}
 
 	&__title {
@@ -43,7 +56,7 @@
 		.md(margin-bottom, 24px);
 	}
 
-	&__par {
+	&__par, &__text li { 
 		font-size: 20px;
 		line-height: 32px;
 		letter-spacing: 0.04em;
@@ -51,7 +64,8 @@
 
 		.sm-block({
 			font-size: 16px;
-			line-height: 160%
+			line-height: 160%;
+			margin-bottom: 12px;
 		});
 
 		&:last-of-type {
@@ -113,6 +127,20 @@
 
 .typical--fitnes {
 	background-color: #FFFDFC;
+}
+
+.typical--1 {
+	padding-bottom: 0;
+	.md(padding-bottom, 0);
+}
+
+.typical--2 {
+	padding-top: 0;
+	.md(padding-top, 0);
+
+	.typical__par {
+		margin-bottom: 20px!important;
+	}
 }
 
 // fitnes page 2 and 3 section

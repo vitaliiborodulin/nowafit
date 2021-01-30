@@ -14,6 +14,21 @@
 
 		.typical__text {
 			padding-left: 0;
+			li {
+				&::before {
+					color: @green;
+				}
+			}
+			// p {
+			// 	&:last-of-type {
+			// 		margin-bottom: 20px!important;
+			// 		.md(margin-bottom, 20px);
+			// 	}
+			// }
+
+			mark {
+				background-color: @green;
+			}
 		}
 
 		.typical__pic {
@@ -22,5 +37,19 @@
 				.md(display, none);
 			}
 		}
+	}
+
+	.typical--2 {
+		.typical__content {
+			align-items: flex-end;
+		}
+	// 	.typical__text {
+	// 		p {
+	// 			&:last-of-type {
+	// 				margin-bottom: 20px;
+	// 				.md(margin-bottom, 0);
+	// 			}
+	// 		}
+	// 	}
 	}
 }

@@ -1,9 +1,17 @@
 .what {
+	margin-top: -20px;
 	padding-bottom: 140px;
+	.md-block({
+		margin-top: 0;
+		padding-bottom: 30px;
+	});
 	
 	&__title {
-		margin-bottom: 100px;
+		margin-bottom: 60px;
 		text-align: center;
+		.sm-block({
+			margin-bottom: 32px;
+		});
 	}
 
 	&__content {
@@ -13,22 +21,31 @@
 	&__item {
 		.col();
 		.size(4);
+		.size-md(12);
 		padding: 40px;
 		border: 1px solid @green;
 		border-radius: 8px;
+		.md(margin-bottom, 24px);
+	}
 
-		img {
-			position: relative;
-			&::after {
-				position: absolute;
-				content: '';
-				top: 0;
-				left: 0;
-				width: 60px;
-				height: 60px;
-				background-color: @green;
-				border-radius: 8px;
-			}
-		}
+	&__pic {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		margin-bottom: 30px;
+		background-color: @green;
+		border-radius: 8px;
+		.sm(margin-bottom, 24px);
+	}
+
+	&__header {
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0.05em;
+		.md(font-size, 20px);
 	}
 }
