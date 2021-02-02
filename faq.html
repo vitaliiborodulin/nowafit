@@ -54,7 +54,7 @@
 	
 			<div class="hero__content">
 				<h1 class="hero__title">FAQ</h1>
-				<h2 class="hero__subtitle">Nowoczesna platforma dla kobiet z którą poprawisz swoje fizyczne oraz mentalne zdrowie.</h2>
+				<div class="hero__subtitle">Nowoczesna platforma dla kobiet z którą poprawisz swoje fizyczne oraz mentalne zdrowie.</div>
 			</div>
 	
 		</div>
@@ -329,7 +329,28 @@
 	<!-- end faq-box -->
 
 	<!-- faq-feedback -->
+	<section class="feedback">
+		<div class="container">
+			<div class="feedback__content">
 	
+				<form method="post" action="#" class="feedback__form">
+					<h2 class="feedback__title">Zadaj swoje pytanie</h2>
+					<label for="feedname">Imię</label>
+					<input class="feedback__input" type="text" name="name" id="feed-name" placeholder="Paulina" required>
+					<label for="feedemail">E-mail</label>
+					<input class="feedback__input" type="email" name="name" id="feed-email" placeholder="Hereismyemail@gmail.com" required>
+					<label for="feed-text">Pytanie</label>
+					<textarea class="feedback__input" name="text" id="feed-text" placeholder="Napisz swoje pytanie..." required></textarea>
+					<div class="feedback__agree">
+						<input type="checkbox" id="feed-check" checked>
+						<label for="feed-check" class="feedback__agree-text">Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych w celu przesyłania i otrzymywania informacji handlowych oraz marketingu bezpośredniego przez spółkę 2A Fitness sp z o o.</label>
+					</div>
+					<button type="submit" class="btn btn-submit feedback__btn">Zadaj pytanie</button>
+				</form>
+	
+			</div>
+		</div>
+	</section>
 	<!-- end faq-feedback -->
 
 </main>
