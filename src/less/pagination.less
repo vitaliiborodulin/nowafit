@@ -1,0 +1,63 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		position: relative;
+		width: 60px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0.05em;
+
+		font-family: 'Poiret One', cursive;
+		font-weight: 400;
+
+		&::after {
+			display: none;
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 24px;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: @textcolor;
+		}
+		&:first-child {
+			&::after {
+				display: block;
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		font-size: 30px;
+		color: white;
+		background-color: @accent;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		.sm(font-size, 20px);
+	}
+}
+
+.faq__pagination {
+	.pagination__btn {
+		background-color: @gray;
+	}
+}

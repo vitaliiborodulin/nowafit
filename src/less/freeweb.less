@@ -82,6 +82,43 @@
 		}
 	}
 
+	&__date-box {
+    position: relative;
+    z-index: 1;
+    font-size: 36px;
+    line-height: 100%;
+		letter-spacing: 0.02em;
+		.sm(font-size, 24px);
+		&:after {
+			position: absolute;
+			content: '';
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%);
+			bottom: -10px;
+			width: 257px;
+			height: 25px;
+			background-color: #fff;
+			opacity: 0.4;
+			border-radius: 4px;
+			z-index: -1;
+			.sm-block({
+				width: 175px;
+				height: 18px;
+			});
+		}
+	}
+
+	&__date-text {
+		display: none;
+		font-size: 14px;
+		line-height: 100%;
+		letter-spacing: 0.03em;
+		opacity: 0.5;
+		margin-bottom: 8px;
+		.md(display, block);
+	}
+
 }
 
 // psyhology page freeweb section
@@ -89,3 +126,6 @@
 
 // diet page freeweb section
 @import "page-diet/diet-freeweb";
+
+// insights page freeweb section
+@import "insights/insights-freeweb";

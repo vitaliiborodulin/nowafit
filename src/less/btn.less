@@ -61,3 +61,23 @@
 		background: url(../img/link-arrow.svg) no-repeat;
 	}
 }
+
+.btn-submit {
+	padding-left: 35px;
+	padding-right: 70px;
+	border: none;
+	cursor: pointer;
+	&::before {
+		display: none;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		margin-top: -6px;
+		right: 30px;
+		width: 18px;
+		height: 12px;
+		background: url(../img/link-arrow.svg) no-repeat;
+	}
+}

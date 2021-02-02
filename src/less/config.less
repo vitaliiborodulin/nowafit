@@ -6,6 +6,9 @@
 @red: #FFC8BE;
 @green: #C7FBD2;
 @light_gray: #C2C2C2;
+@gray: #E0E0E0;
+@formtext: #666666;
+@error: #FF5233;
 @mainfamily: 'Lato', sans-serif; // Main Font Family
 
 // fonts
@@ -56,31 +59,14 @@
 	.wrapper();
 }
 
-// ::placeholder {
-// 	color: @white;
-// 	font-size: 12px;
-// }
+::placeholder {
+	color: @gray;
+}
 
 ::selection {
 	background-color: @accent;
 	color: @white;
 }
-
-// input,
-// textarea {
-// 	outline: none;
-
-// 	&:focus:required:invalid {
-// 		border-color: red
-// 	}
-
-// 	&:required:valid {
-// 		border-color: green
-// 	}
-// }
-// html {
-// 	scroll-behavior: smooth;
-// }
 
 body {
 	font-size: 20px;
@@ -100,11 +86,16 @@ body {
 	// overflow: hidden;
 // }
 
-input, button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
+// input, button {
+// 	-webkit-user-select: none;
+// 	-moz-user-select: -moz-none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+
+// 	-webkit-appearance: none;
+// 	-moz-appearance: radio-container;
+// 	appearance: none;
+// }
 
 .page-psyhology {
 	background-color: #FCFEFF;

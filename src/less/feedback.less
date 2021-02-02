@@ -1,0 +1,120 @@
+.feedback {
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	background: url(../img/feed-bg-1.svg) 10% 30% no-repeat, url(../img/feed-bg-2.svg) 90% 70% no-repeat;
+	.lg(background, none);
+
+	.md-block({
+		padding-top: 60px;
+		padding-bottom: 60px;
+	});
+
+	&__form {
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 60px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		background-color: @white;
+		box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;
+		.sm(padding, 40px);
+	}
+
+	&__title {
+		align-self: center;
+		margin-bottom: 40px;
+		font-size: 42px;
+		line-height: 100%;
+		.sm-block({
+			margin-bottom: 28px;
+			font-size: 24px;
+			letter-spacing: 0.02em;
+		});
+	}
+
+	label {
+		margin-bottom: 7px;
+		font-size: 16px;
+		line-height: 100%;
+		color: @formtext;
+		letter-spacing: 0.03em;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 18px;
+		margin-bottom: 30px;
+		border: 1px solid @gray;
+		border-radius: 4px;
+		font-size: 16px;
+		color: @textcolor;
+		.sm-block({
+			margin-bottom: 8px;
+			padding: 16px;
+			font-size: 14px;
+		});
+
+		-webkit-user-select: none;
+		-moz-user-select: -moz-none;
+		-ms-user-select: none;
+		user-select: none;
+
+		-webkit-appearance: none;
+		-moz-appearance: radio-container;
+		appearance: none;
+		outline: none;
+
+		&:required {
+			border: 1px solid @textcolor;
+		}
+		&:invalid {
+			border: 1px solid @gray
+		}
+	}
+
+	textarea {
+		margin-bottom: 35px;
+		min-height: 160px;
+		resize: none;
+		.sm-block({
+			margin-bottom: 24px;
+			min-height: 144px;
+		});
+	}
+
+	&__agree {
+		// display: flex;
+		// align-items: flex-start;
+		// justify-content: space-between;
+		margin-bottom: 34px;
+		.sm(margin-bottom, 32px);
+
+		&--error {
+			color: @error!important;
+		}
+	}
+
+	input[type=checkbox] {
+		background-color: transparent;
+		cursor: pointer;
+		margin-right: 20px;
+		width: 24px;
+		height: 24px;
+
+		&:checked {
+			background-color: @white;
+		}
+	}
+
+	&__btn {
+		align-self: center;
+	}
+}
+
+// faq page feedback section
+@import "faq/faq-feedback";

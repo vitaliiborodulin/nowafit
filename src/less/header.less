@@ -54,8 +54,8 @@
     font-size: 18px;
 		letter-spacing: 0.05em;
 		
-		.md-block({
-			transform: translate3d(-110vh,0,0);
+		.lg-block({
+			transform: translateX(-105%);
 			display: none;
 			transform-origin: right top;
 			transition: all 0.5s ease-in-out;
@@ -81,7 +81,7 @@
 	
 		&.header__menu--open {
 			margin-left: -10px;
-			transform: translate3d(0vh,0vh,0);
+			transform: translateX(0);
 		}
 
     li {
@@ -100,6 +100,22 @@
 
   &__links {
 		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+
+		.btn {
+			display: none;
+			.sm-block({
+				display: none!important;
+			});
+		}
+
+		a:not(.btn) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
 		img {
 			width: 42px;
 			height: 42px;
@@ -119,7 +135,7 @@
 		@transition-time: 0.5s;
 
 		display: none;
-		.md-block({
+		.lg-block({
 			display: block;
 			display: flex;
 		});
@@ -199,3 +215,9 @@
 	}
 
 }
+
+// psyhology page header section
+@import "page-psyhology/psyhology-header";
+
+// diet page header section
+@import "page-diet/diet-header";

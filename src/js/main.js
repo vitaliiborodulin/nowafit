@@ -7,5 +7,8 @@ $(function(){
 	//= components/slider.js
 	//= components/popup.js
 	//= components/faq.js
+	//= components/tab.js
+	//= components/select.js
+	//= components/checkbox.js
 
 });

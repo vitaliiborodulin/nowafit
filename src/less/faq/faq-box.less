@@ -1,0 +1,104 @@
+.faq {
+	.blog {
+		
+		&__tab {
+			&:hover, &--active {
+				background-color: @gray;
+				border-color: @gray;
+			}
+		}
+
+		&__tabs--mobile {
+			select {
+				border: 1px solid @gray;
+			}
+		}
+
+		&__item {
+			.row-flex();
+			align-items: flex-start;
+		}
+
+		&__left, &__right {
+			.col();
+			.size(6);
+			.size-md(12);
+		}
+
+		&__faq-item {
+			margin-bottom: 30px;
+			padding: 30px;
+			border-radius: 4px;
+			border: 1px solid @textcolor;
+			.md-block({
+				padding: 16px;
+				margin-bottom: 24px;
+			});
+		}
+
+		&__question {
+			position: relative;
+			padding-right: 60px;
+			cursor: pointer;
+			font-size: 24px;
+			line-height: 160%;
+			letter-spacing: 0.04em;
+			.md-block({
+				padding-right: 40px;
+				font-size: 16px;
+			});
+			&::after {
+				position: absolute;
+				text-align: center;
+				line-height: 40px;
+				content: '\002B';
+				right: 0;
+				top: 0;
+				width: 40px;
+				height: 40px;
+				font-size: 40px;
+				color: @textcolor;
+				background-color: @gray;
+				border-radius: 4px;
+				.md-block({
+					width: 24px;
+					height: 24px;
+					line-height: 24px;
+					font-size: 24px;
+				});
+			}
+			&--open {
+				&::after {
+					content: '\2212';
+				}
+			}
+		}
+
+		&__answer {
+			border-top: 1px solid @textcolor;
+			margin-top: 20px;
+			padding-top: 20px;
+			display: none;
+			font-size: 18px;
+			line-height: 150%;
+			letter-spacing: 0.03em;
+			.md-block({
+				margin-top: 16px;
+				padding-top: 16px;
+				font-size: 16px;
+				line-height: 160%;
+				letter-spacing: 0.04em;
+			});
+			li {
+				margin-bottom: 20px;
+				.md(margin-bottom, 12px);
+				&::before {
+					content: '\25A0';
+					margin-right: 15px;
+					color: @textcolor;
+				}
+			}
+		}
+
+	}
+}

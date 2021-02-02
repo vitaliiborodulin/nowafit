@@ -1,0 +1,36 @@
+.insights {
+	.freeweb {
+		background: @accent url(../img/in-fw-bg.svg) 85% center no-repeat;
+		.md-block({
+			background-position-x: center;
+			background-position-y: 80%;
+		});
+
+		&__text {
+			.size(8);
+			.size-md(12);
+		}
+
+		&__pic {
+			.size(4);
+			.size-md(12);
+		}
+
+		&__box {
+			.md-block({
+				align-items: flex-start;
+				flex-direction: column
+			});
+		}
+	
+		&__btn {
+			// margin-bottom: 32px;
+			.md(margin-top, 38px);
+		}
+
+		&__date-box {
+			.md(order, -1);
+		}
+
+	}
+}

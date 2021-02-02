@@ -1,0 +1,129 @@
+.blog {
+	padding-bottom: 140px;
+	.md(padding-bottom, 50px);
+	
+	&__tabs {
+		border-top: 1px solid fade(@textcolor, 50%);
+		padding: 100px 0;
+		display: flex;
+		justify-content: center;
+		.lg(display, none);
+	}
+
+	&__tabs--mobile {
+		display: none;
+		text-align: center;
+		margin-bottom: 40px;
+		.lg(display, block);
+		.sm(max-width, 100%);
+		select {
+			// position: relative;
+			// z-index: 1;
+			max-width: 343px;
+			width: 100%;
+			padding: 18px;
+			font-family: 'Poiret One', cursive;
+			border-radius: 8px;
+			border: 1px solid @accent;
+			background: transparent;
+			outline: none;
+
+			// &::after{
+			// 	position: absolute;
+			// 	right: 5px;
+			// 	top: 5px;
+			// 	content: 'ass';
+			// 	display: block;
+			// 	width: 25px;
+			// 	height: 25px;
+			// 	background-color: #000;
+			// 	z-index: 2;
+			// }
+		}
+	}
+
+	&__tab {
+		margin: 0 20px;
+		padding: 20px;
+		width: 242px;
+		text-align: center;
+		color: fade(@textcolor, 50%);
+		border: 1px solid fade(@textcolor, 50%);
+		border-radius: 8px;
+		font-family: 'Poiret One', cursive;
+		font-weight: 400;
+		cursor: pointer;
+		transition: all 0.5s ease;
+		&:hover, &--active {
+			color: @textcolor;
+			background-color: @accent;
+			border-color: @accent;
+		}
+	}
+
+	&__box {
+		position: relative;
+		padding-top: 60px;
+		border-top: 1px solid fade(@textcolor, 20%);
+		.sm(padding-top, 30px);
+	}
+
+	&__title {
+		position: absolute;
+		width: 210px;
+		left: 0;
+		top: -18px;
+		color: fade(@textcolor, 40%);
+		background-color: @white;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 60px;
+		.sm(margin-bottom, 24px);
+	}
+
+	&__pic {
+		width: 40%;
+		margin-right: 22px;
+	}
+
+	&__header {
+		margin-bottom: 20px;
+		font-size: 42px;
+		line-height: 100%;
+		.sm-block({
+			margin-bottom: 16px;
+			font-size: 18px;
+		});
+	}
+
+	&__descr {
+		margin-bottom: 40px;
+		line-height: 160%;
+		letter-spacing: 0.04em;
+		.sm-block({
+			margin-bottom: 20px;
+			font-size: 12px;
+		});
+	}
+
+	&__link {
+		.sm(font-size, 12px);
+	}
+
+	&__text {
+		width: 60%;
+		padding-bottom: 55px;
+		border-bottom: 1px solid fade(@textcolor, 20%);
+		.sm-block({
+			padding-bottom: 47px;
+		});
+	}
+	
+}
+
+// faq page faq-box section
+@import "faq/faq-box";
