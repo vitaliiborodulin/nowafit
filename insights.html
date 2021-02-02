@@ -72,8 +72,16 @@
 					<div class="blog__tab" data-tab="diet">Odżywianie</div>
 				</div>
 	
+				<div class="blog__tabs--mobile">
+					<select id="blog-select">
+						<option class="blog__tab" value="all">Wszystkie kategorie</option>
+						<option class="blog__tab" value="psyh" selected>Psychologia</option>
+						<option class="blog__tab" value="diet">Odżywianie</option>
+					</select>
+				</div>
+	
 				<div class="blog__box">
-					<!-- <h2 class="blog__title">Artykuły z psychologii</h2> -->
+					<h2 class="blog__title">Artykuły z psychologii</h2>
 					<div class="blog__items">
 	
 						<div class="blog__item" data-tab="diet">
@@ -123,8 +131,13 @@
 					</div>
 				</div>
 	
-				<div class="blog__pagination">
-					1 2
+				<div class="pagination">
+					<button type="button" class="pagination__btn pagination__prev">&lt;</button>
+					<ul class="pagination__list">
+						<li class="pagination__item">01</li>
+						<li class="pagination__item">02</li>
+					</ul>
+					<button type="button" class="pagination__btn pagination__next">&gt;</button>
 				</div>
 	
 			</div>
