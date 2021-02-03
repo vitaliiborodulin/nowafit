@@ -8,6 +8,7 @@
 	&__content {
 		.row-flex();
 		position: relative;
+		z-index: 2;
 		justify-content: center;
 		align-items: center;
 
@@ -99,6 +100,7 @@
 
 .typical-wrapper {
 	position: relative;
+	z-index: 20;
 	&::after {
 		position: absolute;
 		content: '';
@@ -107,7 +109,7 @@
 		background: url(../img/typ-wrap-bg.svg) no-repeat;
 		left: 0;
 		top: 0;
-		// z-index: -1;
+		z-index: 1;
 	}
 }
 
