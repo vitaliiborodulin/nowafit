@@ -77,6 +77,41 @@
 		.size-md(12);
 
 	}
+
+	&__info-box {
+		margin-right: 5px;
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		display: flex;
+		justify-content: center;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: 0.05em;
+		color: fade(@textcolor, 60%);
+		display: none;
+		&::after {
+			position: absolute;
+			content: '\00BB';
+			left: 50%;
+			transform: translateX(-50%) rotate(90deg);
+			bottom: -20px;
+			font-size: 30px;
+		}
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.page-hero__down {
+		display: block;
+	}
 }
 
 // psyhology page hero section
@@ -87,4 +122,7 @@
 
 // fitness page hero section
 @import "page-fitnes/fitnes-hero";
+
+// subscribe page hero section
+@import "subscribe";
 

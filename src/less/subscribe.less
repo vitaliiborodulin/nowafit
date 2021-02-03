@@ -1,0 +1,97 @@
+.subscribe {
+	.page-hero {
+		background: @accent url(../img/in-fw-bg.svg) 90% center no-repeat;
+		.md-block({
+			background-position-x: center;
+			background-position-y: 80%;
+		});
+
+		&__text {
+			.size(8);
+			.size-md(12);
+		};
+
+		&__pic {
+			.size(4);
+			.size-md(12);
+			img {
+				border-bottom: 1px solid @white;
+			}
+		};
+
+		&__title {
+			margin-bottom: 40px;
+			font-size: 80px;
+			line-height: 100%;
+			letter-spacing: -0.01em;
+			.sm-block({
+				text-align: left;
+				margin-bottom: 24px;
+				font-size: 36px;
+				line-height: 120%;
+			});
+		}
+
+		&__subtitle {
+			font-size: 20px;
+			line-height: 160%;
+			letter-spacing: 0.04em;
+			margin-bottom: 20px;
+			.sm-block({
+				text-align: left;
+				margin-bottom: 12px;
+				font-size: 16px;
+			});
+		}
+
+		&__date-title {
+			margin-bottom: 15px;
+			font-size: 16px;
+			line-height: 100%;
+			letter-spacing: 0.03em;
+			opacity: 0.5;
+			.sm-block({
+				margin-bottom: 8px;
+				font-size: 14px;
+			});
+		}
+
+		&__date {
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+			margin-bottom: 30px;
+			font-size: 36px;
+			line-height: 100%;
+			letter-spacing: 0.02em;
+			.sm-block({
+				// margin-bottom: 40px;
+				font-size: 24px;
+			});
+			&::after {
+				position: absolute;
+				content: '';
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%);
+				bottom: -10px;
+				width: 100%;
+				height: 25px;
+				background-color: fade(@white, 40%);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+.subscribe.psyhology-subscribe {
+	.page-hero {
+		background-color: @accent;
+	}
+}
+
+.subscribe.diet-subscribe {
+	.page-hero {
+		background-color: @green;
+	}
+}
