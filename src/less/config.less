@@ -83,21 +83,25 @@ body {
 	background-color: @white;
 }
 
-.page-psyhology {
-	background-color: #FCFEFF;
+.page-psyhology, .header-psyhology {
+	background-color: #FCFEFF!important;
 }
 
-.page-fitnes {
-	background-color: #FFFDFC;
+.page-fitnes, .header-fitnes {
+	background-color: #FFFDFC!important;
 }
 
-.page-diet {
-	background-color: #F8FBF9;
+.page-diet, .header-diet {
+	background-color: #F8FBF9!important;
 }
 
 h1, h2, h3, h4 {
 	font-family: 'Poiret One', cursive;
 	font-weight: 400;
+}
+
+.main-content {
+	min-height: 100vh;
 }
 
 .section-title {
@@ -108,4 +112,10 @@ h1, h2, h3, h4 {
 		text-align: left;
 		font-size: 28px;
 	});
+}
+
+input:not(input[type=checkbox]), button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
