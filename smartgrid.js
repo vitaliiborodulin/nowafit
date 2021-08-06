@@ -8,10 +8,10 @@ module.exports = {
     breakPoints: {
         xl: {
             width: '1140px'
-				},
-				lg: {
-					width: '960px'
-				},
+        },
+        lg: {
+            width: '960px'
+        },
         md: {
             width: '720px'
         },
@@ -19,12 +19,12 @@ module.exports = {
             width: '540px'
         },
         xs: {
-						width: '343px',
-						fields: '16px'
+            width: '343px',
+            fields: '16px'
         },
         xxs: {
-			      width: '320px',
+            width: '320px',
         }
-	},
-	detailedCalc: true
+    },
+    detailedCalc: true
 };

@@ -1,0 +1,105 @@
+.after {
+    padding: 140px 0;
+    // min-height: 1356px;
+    .md-block ({
+        padding: 80px 0;
+    });
+
+    &__title {
+        margin-bottom: 80px;
+        text-align: center;
+        .sm-block({
+            margin-bottom: 56px;
+            text-align: center;
+        });
+    }
+    
+    &__box {
+        .row-flex();
+        max-width: 960px;
+        // height: 920px;
+        margin: 0 auto!important;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        background: url('../img/after-bg.svg') no-repeat center/contain;
+        .md-block({
+            background: none;
+            justify-content: center;;
+        });
+    }
+
+    &__item {
+        .col();
+        .size(6);
+        .size-md(12);
+        position: relative;
+        width: 360px;
+        max-width: 360px;
+        height: 360px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
+        &:first-child, &:nth-child(2){
+            margin-bottom: 200px;
+            .md(margin-bottom, 32px);
+        }
+
+        text-align: center;
+        border-radius: 50%;
+        background-color: @white;
+        box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08);
+
+        .lg-block({
+            width: 300px;
+            max-width: 300px;
+            min-width: 300px;
+            height: 300px;
+        });
+
+        &:not(:last-child){
+            .md-block({
+                margin-bottom: 32px;
+            });
+        }
+
+        &:not(:last-child)::after {
+            display: none;
+            position: absolute;
+            content: '';
+            width: 3px;
+            height: 32px;
+            background-color: #87E29B;
+            left: 50%;
+            bottom: -32px;
+            transform: translateX(-50%);
+            // z-index: -1;
+            .md-block({
+                display: block;
+            });
+        }
+
+        img {
+            margin-bottom: 22px;
+            // .md-block({
+            //     margin-bottom: 22px;
+            // });
+        }
+
+        p {
+            max-width: 256px;
+            line-height: 160%;
+            letter-spacing: 0.04em;
+            .lg(font-size, 18px);
+            .md-block({
+                max-width: 220px;
+            });
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.manager {
+    padding-top: 140px;
+    background-color: #F2FAF4;
+    .md(padding-top, 80px);
+
+    &__title {
+        margin-bottom: 76px;
+        text-align: center;
+        .xl(margin-bottom, 32px);
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        .xl-block({
+            padding-top: 120px;
+            position: relative;
+        });
+        .md(padding-top, 217px);
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .xl(position, static);
+
+        p {
+            position: absolute;
+            z-index: -1;
+            padding: 30px;
+            padding-right: 20px;
+
+            font-size: 24px;
+            background-color: #F2FAF4;
+            border: 1px solid @green;
+            border-radius: 8px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                display: none;
+                .md(display, block);
+            }
+
+            .md-block({
+                padding: 20px;
+                font-size: 20px;
+                line-height: 140%;
+            });
+
+            span {
+                position: relative;
+                font-weight: 400;
+                &::after {
+                    position: absolute;
+                    z-index: -1;
+                    content: '';
+                    width: 105%;
+                    height: 25px;
+                    background-color: #C7FBD2;
+                    left: 50%;
+                    bottom: -10px;
+                    transform: translateX(-50%);
+                    .md-block({
+                        height: 15px;
+                        bottom: -5px;
+                    });
+                }
+            }
+        }
+
+        &:first-child {
+            img {
+                .md-block({
+                    width: 206px;
+                })
+            }
+            p {
+                max-width: 360px;
+                left: -220px;
+                top: 0;
+
+                &::after {
+                    left: 0;
+                    top: 107px;
+                    background: url(../img/manager-1-line.svg) no-repeat;
+                    width: 93px;
+                    height: 316px;
+                }
+
+                .xl-block({
+                    left: 0;
+                });
+            }
+        }
+
+        &:last-child {
+            img {
+                .md-block({
+                    width: 181px;
+                })
+            }
+           p {
+                max-width: 315px;
+                right: -248px;
+                top: 0;
+
+                &::after {
+                    right: 0;
+                    top: 108px;
+                    background: url(../img/manager-2-line.svg) no-repeat;
+                    width: 97px;
+                    height: 249px;
+                }
+
+                .xl-block({
+                    right: 0;
+                });
+
+                .md-block({
+                    top: 107px;
+                });
+           }
+        }
+    }
+
+}

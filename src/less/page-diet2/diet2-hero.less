@@ -1,0 +1,123 @@
+.diet2-hero {
+    padding-top: 82px;
+    padding-bottom: 140px;
+    background: url(../img/diet2-hero-bg1.svg) left 90% no-repeat, url(../img/diet2-hero-bg2.svg) right 90% no-repeat;
+    .xl(background, none);
+    .sm-block({
+        padding-bottom: 80px;
+    });
+
+    &__top {
+        padding-top: 96px;
+        padding-bottom: 52px;
+        border-bottom: 2px solid @green;
+        .sm-block({
+            padding-top: 56px;
+            padding-bottom: 28px;
+        });
+    }
+
+    &__subtitle {
+        margin-bottom: 28px;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        opacity: 0.6;
+        font-family: 'Poiret One', cursive;
+        .sm-block({
+            margin-bottom: 16px;
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+        });
+    }
+
+    &__title {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        font-size: 80px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        font-family: 'Poiret One', cursive;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 105%;
+            height: 40px;
+            background-color: @green;
+            opacity: 0.4;
+            z-index: -1;
+            .sm(height, 24px);
+        }
+        .sm-block({
+            font-size: 36px;
+        });
+    }
+
+    &__bottom {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .sm(padding-top, 16px);
+    }
+
+    &__descr {
+        max-width: 500px;
+        // margin-left: auto;
+        align-self: flex-end;
+        margin-bottom: 52px;
+        .sm-block({
+            font-size: 16px;
+            margin-bottom: 40px;
+        });
+    }
+
+    &__video {
+        position: relative;
+        margin-bottom: 60px;
+        // width: 100%;
+        // height: 480px;
+        // background-color: #000;
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        //     width: 150px;
+        //     height: 150px;
+        //     background: url('../img/play.svg') no-repeat;
+        // }
+        .sm(margin-bottom, 40px);
+    }
+
+    &__video {
+        width: 100%;
+        height: 480px;
+        border-radius: 5px;
+        background: url('../img/diet2-hero.jpg') no-repeat center/cover;
+        .sm-block({
+            // width: 342px;
+            height: 400px;
+            background: url('../img/diet2-hero-mob.jpg') no-repeat center/cover;
+        })
+    }
+
+    &__play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        .sm-block({
+            width: 120px;
+            height: 120px;
+        });
+    }
+
+    &__btn {
+    }
+}

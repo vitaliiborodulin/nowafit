@@ -13,6 +13,7 @@
 	&__form {
 		margin: 0 auto;
 		max-width: 600px;
+		min-height: 600px;
 		padding: 60px;
 
 		display: flex;
@@ -116,6 +117,26 @@
 	&__btn {
 		align-self: center;
 	}
+
+	&__success {
+		position: relative;
+		font-size: 36px;
+		line-height: 140%;
+		text-align: center;
+		letter-spacing: 0.02em;
+		.sm(font-size, 24px);
+		&::after {
+			position: absolute;
+			content: '';
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			left: 50%;
+			bottom: -350px;
+			transform: translateX(-50%);
+			background: #87E29B url('../img/feedback-success.svg') no-repeat center;
+		}
+	}
 }
 
 // faq page feedback section
@@ -126,3 +147,6 @@
 
 // diet page feedback section
 @import "page-diet/diet-feedback";
+
+// diet2 page feedback section
+@import "page-diet2/diet2-feedback";

@@ -1,0 +1,62 @@
+<section class="calc">
+    <div class="container">
+        <div class="calc__content">
+
+            <div class="calc__image">
+                <img src="img/calc-img.png" alt="" width="356" height="624">
+            </div>
+
+            <div class="calc__form">
+                <h2 class="section-title calc__title">Ile ty będziesz mogła schudnąć z nami?</h2>
+
+                <form class="diet-calculator">
+                    <div class="diet-calculator__row">
+                        <p>
+                            <label for="weeks">Ilość tygodni</label>
+                            <input type="number" class="diet-calculator__input" id="weeks" min="6"
+                                placeholder="Ile planujesz utrzymać dietę? (minimum 6)" required>
+                        </p>
+                    </div>
+                    <div class="diet-calculator__row">
+                        <div>
+                            <p>
+                                <label for="weight">Waga początkowa</label>
+                                <input type="number" class="diet-calculator__input" id="weight" placeholder="60"
+                                    required>
+                            </p>
+                            <p>
+                                <label for="age">Wiek</label>
+                                <input type="number" class="diet-calculator__input" id="age" placeholder="24" required>
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                <label for="height">Wzrost</label>
+                                <input type="number" class="diet-calculator__input" id="height" placeholder="175"
+                                    required>
+                            </p>
+                            <p>
+                                <label for="cal" class="diet-calculator__tip">Aktywność
+                                    <span class="diet-calculator__q">?</span>
+                                    <span class="diet-calculator__a">Kalorie spalane stabilnie w ciągu dnia</span>
+                                </label>
+                                <select class="diet-calculator__input" id="cal" required>
+                                    <option hidden value="">Brak aktywności</option>
+                                    <option value="1.2">1.2</option>
+                                    <option value="1.375">1.375</option>
+                                    <option value="1.55">1.55</option>
+                                    <option value="1.725">1.725</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="diet-calculator__row">
+                        <button type="submit" class="btn btn-w diet-calculator__btn">Policz postęp</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>

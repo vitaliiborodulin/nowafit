@@ -1,0 +1,38 @@
+.page-diet2 {
+    .freeweb {
+        padding: 20px 0;
+        &__content {
+            align-items: center;
+        }
+        &__pic {
+            align-items: center;
+            .md-block({
+                max-width: 300px;
+                margin: 0 auto;
+            });
+        }
+        &__text {
+            padding: 0;
+            .md(margin-bottom, 32px);
+        }
+        &__par {
+            .sm(font-size, 16px);
+        }
+        &__btn {
+            text-align: center;
+            margin-right: 0;
+            padding-left: 35px;
+            .md-block({
+                margin: 0 auto;
+            });
+            .sm-block({
+                width: 100%;
+                padding-left:  2px;
+                padding-right: 2px;
+            });
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

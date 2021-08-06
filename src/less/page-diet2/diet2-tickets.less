@@ -1,0 +1,88 @@
+.page-diet2 {
+	.tickets {
+		background-color: #F2FAF4!important;
+
+		&__title {
+			.sm-block({
+				display: block;
+				margin-bottom: 40px;
+				text-align: center;
+			});
+			&::before {
+				display: none;
+			}
+		}
+		
+		&__item {
+			.size(4);
+			.size-lg(6);
+			.size-md(12);
+			margin-bottom: 32px;
+			padding: 40px 24px;
+			text-align: left;
+
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.sm-block({
+				padding: 40px 16px;
+				margin-bottom: 16px;
+			});
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.3);
+			}
+		}
+
+		&__price {
+			margin-bottom: 32px;
+			&::after {
+				left: 0;
+				transform: none;
+				width: 280px;
+			}
+
+			.sm-block({
+				margin-bottom: 28px;
+				font-size: 42px;
+			});
+
+			span {
+				font-size: 20px;
+				font-weight: 300;
+				.sm-block({
+					font-size: 18px;
+				});
+			}
+		}	
+
+		&__header {
+			font-size: 36px;
+			font-weight: 300;
+			font-family: 'Lato', sans-serif;
+			.sm-block({
+				font-size: 24px;
+			});
+		}
+
+		&__list {
+			li {
+				margin-bottom: 16px;
+				font-size: 18px;
+				line-height: 150%;
+				letter-spacing: 0.03em;
+				.sm-block({
+					font-size: 16px;
+				});
+			}
+		}
+
+		&__btn {
+			margin-top: auto;
+		}
+	}
+}
