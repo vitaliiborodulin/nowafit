@@ -1,8 +1,11 @@
+//= ../../node_modules/vanilla-lazyload/dist/lazyload.min.js
+
 //= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
 //= ../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js
 
 $(function () {
 
+	//= components/lazyload.js
 	//= components/burger.js
 	//= components/slider.js
 	//= components/popup.js
