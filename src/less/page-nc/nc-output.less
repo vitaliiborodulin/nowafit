@@ -1,0 +1,133 @@
+.nc-output {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 40px;
+
+    // margin-top: 80px;
+    // margin-bottom: 20px;
+    margin-right: -2rem;
+
+    color: #FFFFFF;
+    background: #87E29B;
+    border-radius: 8px 0px 0px 8px;
+    
+    &--head {
+        position: relative;
+        border-radius: 0px 8px 8px 0px;
+
+        // margin-top: 0;
+        // margin-bottom: 0;
+        margin-right: 0;
+        margin-left: -2rem;
+
+        // padding-top: 32px;
+        // padding-bottom: 32px;
+        padding-right: 114px;
+        text-align: right;
+
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            width: 45%;
+            max-width: 500px;
+            height: 1px;
+            background-color: #fff;
+            opacity: 0.5;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+            display: none;
+        }
+    }
+
+    &--video {
+        margin-top: 80px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+
+        font-size: 32px;
+        font-weight: 600;
+
+        color: #FFFFFF;
+    }
+
+    &__par {
+        max-width: 1000px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: #FFFFFF;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .nc-output {
+        margin-right: -1.5rem;
+        padding: 20px;
+
+        &--head {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 80px;
+
+            margin-right: 0;
+            margin-left: -1.5rem;
+        }
+
+        &--video {
+            margin-top: 40px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__par {
+            font-size: 16px;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .nc-output {
+        margin-right: 0;
+        margin-left: -1rem;
+
+        border-radius: 0px 8px 8px 0px;
+
+        &--head {
+            text-align: center;
+            padding-right: 20px;
+            margin-left: -1rem;
+
+            &::before {
+                width: 30%;
+            }
+
+            &::after {
+                display: block;
+                width: 30%;
+            }
+        }
+
+        &__par {
+            text-align: center;
+        }
+    }
+}

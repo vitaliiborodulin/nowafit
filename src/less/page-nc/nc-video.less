@@ -1,0 +1,43 @@
+.nc-video {
+    &__wrapper {
+        padding: 60px;
+        background: #FFFFFF;
+        border-radius: 8px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__par {
+        margin-bottom: 16px;
+
+        font-weight: 400;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__player {
+        video {
+            border-radius: 8px;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .nc-video {
+        &__wrapper {
+            padding: 32px 24px;
+        }
+
+        &__text {
+            margin-bottom: 24px;
+        }
+
+        &__par {
+            margin-bottom: 12px;
+        }
+    }
+}

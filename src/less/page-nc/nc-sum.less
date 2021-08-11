@@ -1,0 +1,83 @@
+.nc-sum {
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__list {
+        .row:first-child {
+            .nc-sum__item {
+                border-top-width: 2px;
+            }
+        }
+
+        .row:last-child {
+            .nc-sum__item {
+                border-bottom-width: 2px;
+            }
+        }
+    }
+
+    &__item {
+        padding: 48px 40px;
+        border: 1px solid #C7FBD2;
+        height: 100%;
+
+        &--even {
+            border-left-color: transparent;
+        }
+
+        &--odd {
+            border-right-color: transparent;
+        }
+    }
+
+    &__cap {
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__head {
+        margin-bottom: 4px;
+    }
+
+    &__number {
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    .nc-sum {
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            padding: 32px 16px;
+        }
+
+        &__cap {
+            margin-bottom: 10px;
+        }
+
+        &__head {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .nc-sum {
+        &__item {
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+        &__number {
+            font-size: 16px;
+        }
+    }
+}

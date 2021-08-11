@@ -39,7 +39,7 @@ exports.htmlProd = htmlProd;
 
 // Styles 
 const cssDev = () => {
-	return gulp.src("./src/less/styles.less")
+	return gulp.src(["./src/less/styles.less", "./src/less/styles-nc.less"])
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(gcmq())
@@ -52,7 +52,7 @@ const cssDev = () => {
 exports.cssDev = cssDev;
 
 const cssProd = () => {
-	return gulp.src("./src/less/styles.less")
+	return gulp.src(["./src/less/styles.less", "./src/less/styles-nc.less"])
 		.pipe(less())
 		.pipe(gcmq())
 		.pipe(autoprefixer())
@@ -115,18 +115,18 @@ exports.imagesDev = imagesDev;
 
 const imagesProd = () => {
 	return gulp.src("./src/img/**/*.*")
-	.pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-			plugins: [
-					{removeViewBox: true},
-					{cleanupIDs: false}
-			]
-    })
-	]))
-	.pipe(gulp.dest(dist + "img"))
+		.pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.mozjpeg({ quality: 75, progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeViewBox: true },
+					{ cleanupIDs: false }
+				]
+			})
+		]))
+		.pipe(gulp.dest(dist + "img"))
 }
 
 exports.imagesProd = imagesProd;
