@@ -1,0 +1,127 @@
+<section class="pay">
+    <div class="container">
+        <form method="post" action="#">
+
+            <div class="pay__content">
+
+                <div class="pay__left">
+                    <h2 class="section-title pay__title">Kurs z dietetyki "Lżej"</h2>
+                    <div class="feedback__form">
+                        <h3 class="pay__caption">Personalia</h3>
+
+                        <div class="form-group field-checkoutform-productid required">
+                            <label for="checkoutform-productid">ID Zakupu</label>
+                            <input class="feedback__input" type="text" name="CheckoutForm[productId]"
+                                id="checkoutform-productid" value="5edc91bf677b59d580556b63516cdae7"
+                                aria-required="true" style="background-color: #E5E5E5" disabled>
+                        </div>
+
+                        <div class="form-group field-checkoutform-firstname required">
+                            <label for="checkoutform-firstname">Imię</label>
+                            <input class="feedback__input" type="text" name="CheckoutForm[firstName]"
+                                id="checkoutform-firstname" placeholder="Paulina" aria-required="true">
+                            <p class="help-block help-block-error"></p>
+                        </div>
+
+                        <div class="form-group field-checkoutform-lastname required">
+                            <label class="control-label" for="checkoutform-lastname">Last name</label>
+                            <input type="text" id="checkoutform-lastname" class="feedback__input"
+                                name="CheckoutForm[lastName]" aria-required="true" placeholder="Kowalska">
+                            <p class="help-block help-block-error"></p>
+                        </div>
+
+                        <div class="form-group field-checkoutform-email required">
+                            <label class="control-label" for="checkoutform-email">Email</label>
+                            <input type="email" id="checkoutform-email" class="feedback__input"
+                                name="CheckoutForm[email]" aria-required="true" placeholder="Hereismyemail@gmail.com">
+                            <p class="help-block help-block-error"></p>
+                        </div>
+
+                        <div class="form-group field-checkoutform-consentprivacy required">
+                            <div class="checkbox">
+                                <label for="checkoutform-consentprivacy">
+                                    <input type="hidden" name="CheckoutForm[consentPrivacy]" value="0"><input
+                                        type="checkbox" id="checkoutform-consentprivacy"
+                                        name="CheckoutForm[consentPrivacy]" value="1" aria-required="true"
+                                        aria-invalid="false">
+                                    <span>*</span> Zapoznałam się z <a href="https://nowafit.pl/privacy-policy">Polityką
+                                        Prywatności i
+                                        Regulaminem</a>
+                                </label>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group field-checkoutform-consent required">
+                            <div class="checkbox">
+                                <label for="checkoutform-consent">
+                                    <input type="hidden" name="CheckoutForm[consent]" value="0"><input type="checkbox"
+                                        id="checkoutform-consent" name="CheckoutForm[consent]" value="1"
+                                        aria-required="true" aria-invalid="false">
+                                    <span>*</span> Wyrażam dobrowolną zgodę na przetwarzanie moich danych
+                                    osobowych w celu przesyłania
+                                    i otrzymywania informacji handlowych oraz marketingu bezpośredniego przez spółkę 2A
+                                    Fitness sp z o o.
+                                </label>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pay__right">
+
+                    <div class="pay__box">
+                        <h3 class="pay__caption">Wybierz metodę płatności</h3>
+
+                        <div class="pay__box-wrapper">
+                            <h4>Płatnośći:</h4>
+                            <div class="pay__cards">
+                                <img src="img/pay-mc.svg" alt="master card" width="145" height="56">
+                                <img src="img/pay-visa.svg" alt="visa" width="145" height="56">
+                                <img src="img/pay-pp.svg" alt="pay pall" width="145" height="56">
+                                <img src="img/pay-visa.svg" alt="visa" width="145" height="56">
+                                <img class="checked" src="img/pay-mc.svg" alt="master card" width="145" height="56">
+                                <img src="img/pay-pp.svg" alt="pay pall" width="145" height="56">
+                                <img src="img/pay-mc.svg" alt="master card" width="145" height="56">
+                                <img src="img/pay-visa.svg" alt="visa" width="145" height="56">
+                                <img src="img/pay-pp.svg" alt="pay pall" width="145" height="56">
+                                <img src="img/pay-visa.svg" alt="visa" width="145" height="56">
+                                <img src="img/pay-mc.svg" alt="master card" width="145" height="56">
+                            </div>
+                        </div>
+
+                        <div class="pay__box-wrapper">
+                            <h4>Raty</h4>
+                            <div class="pay__cards">
+                                <img src="img/pay-sber.svg" alt="sber" width="145" height="56">
+                                <img src="img/pay-vtb.svg" alt="vtb" width="145" height="56">
+                                <img src="img/pay-tinkoff.svg" alt="tinkoff" width="145" height="56">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pay__box">
+                        <h3 class="pay__caption">Do zapłaty</h3>
+                        <p class="pay__descr">Dostęp do kursu jeszcze w ciągu <b>1 miesiecy</b></p>
+                        <div class="form-group field-checkoutform-promocode">
+                            <label class="control-label" for="checkoutform-promocode">Kod promocyjny</label>
+                            <input type="text" id="checkoutform-promocode" class="feedback__input"
+                                name="CheckoutForm[promoCode]" placeholder="BYHWY1020">
+                            <p class="help-block help-block-error"></p>
+                        </div>
+                        <div class="form-group field-checkoutform-final">
+                            <div class="pay__total"><span>249.00</span> PLN</div>
+                            <button type="submit" class="btn btn-submit pay__btn">Zapłać za kurs</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</section>
